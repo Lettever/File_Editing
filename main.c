@@ -1,5 +1,6 @@
 //TODO: Do create_function
 //TODO: Do create_struct
+//TODO: Do create_typedef
 
 //TODO: Test get_total_lines
 //TODO: Test get_file_stats
