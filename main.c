@@ -1,6 +1,8 @@
 //TODO: Do create_function
 //TODO: Do create_struct
 //TODO: Do create_typedef
+//TODO: Do swap_text
+//TODO: Do Swap_old_text
 
 //TODO: Test get_total_lines
 //TODO: Test get_file_stats
@@ -23,18 +25,16 @@ typedef struct
 {
     u32 lines;
     u32 *chars;
-}file_stats;
-struct file
-{
-	file_stats* stats;
-	string file_name;
-}
+    string file_name;
+}file;
 
 void insert_text(string, position, string);
 void delete_text(string, position, position);
 void append_text(string, string);
 void create_function(string, string, string*, string*, u8);
-void create_struct(string, string, string*, string*);
+void create_struct(string, string, string*, string*, u8);
+void create_typedef(string, string, string);
+void swap_text(string, string, string);
 
 u32 get_total_lines(string);
 u32 get_total_chars(string);
@@ -146,11 +146,19 @@ void append_text(string file_name, string text)
     fprintf(file_pointer, text);
     fclose(file_pointer);
 }
-void create_function(string file_name, string function_name, string* var_types, string* var_name, u8 size)
+void create_function(string file_name, string function_name, string* var_types, string* var_name, u8 var_size)
 {
 
 }
-void create_struct(string file_name, string struct_name, string* var_types, string* var_names)
+void create_struct(string file_name, string struct_name, string* var_types, string* var_names, u8 var_size)
+{
+
+}
+void create_typedef(string file_name, string old_name, string new_name)
+{
+
+}
+void swap_text(string, string, string)
 {
 
 }
